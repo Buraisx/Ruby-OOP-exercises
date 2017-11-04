@@ -1,7 +1,7 @@
 class BankAccount
-	def initialize
-		@balance = 0
-		@interest_rate = 0
+	def initialize(balance, interest_rate)
+		@balance = balance
+		@interest_rate = interest_rate
 	end
 
 	# deposit money
@@ -14,7 +14,7 @@ class BankAccount
 		@balance = @balance - amount
 	end
 
-	# def gain_interest
-		
-	# end
+	def gain_interest
+		@balance = @balance * @interest_rate
+	end
 end
